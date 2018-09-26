@@ -23,10 +23,7 @@ class App extends Component {
     const country = e.target.elements.country.value;
     const city = e.target.elements.city.value;
 
-    if (!country || !city) {
-      alert("Please fill both fields !!");
-      return false;
-    } else {
+    if (country || city) {
       const api_call = await fetch(
         `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_key}&units=metric`
       );
@@ -44,9 +41,22 @@ class App extends Component {
         country: data.sys.country,
         humidity: data.main.humidity,
         //description: data.weather[0].description,
-        error: "please fill out the form first"
+        error: ""
       });
+    } else {
+      alert("Please fill out both Country & City");
+      return false;
+
+      // this.setState({
+      //   temperature: undefined,
+      //   city: undefined,
+      //   country: undefined,
+      //   humidity: undefined,
+      //   error: "Please Enter chit"
+      // });
     }
+
+    console.log(this.state.error);
   };
   render() {
     return (
