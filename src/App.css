@@ -1,0 +1,89 @@
+body {
+  margin: 2rem;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #529130;
+}
+
+.wrapper {
+  background: linear-gradient(to right, #e67e22, #e74c3c);
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#title-container {
+  text-align: center;
+  height: 600px;
+  background-image: url("pexel.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+#text {
+  margin-bottom: 17rem;
+  color: #f16051;
+}
+
+.form-container {
+  height: 600px;
+
+  padding-top: 200px;
+  padding-left: 50px;
+  background-image: url("sky.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+input[type="text"] {
+  width: 30%;
+  padding: 3px;
+  margin: 3px;
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 1px #f16051;
+  color: #fff !important;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+#boto {
+  background: rgb(202, 63, 12);
+  width: 30%;
+  text-align: center;
+  color: #fff !important;
+  border: none;
+  font-weight: lighter;
+}
+
+#boto:active {
+  outline: none;
+}
+
+#weather {
+  display: flex;
+  flex-direction: column;
+}
+
+.weather_key {
+  width: 60%;
+  margin: 1rem;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 1px #f16051;
+  color: #fff !important;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
